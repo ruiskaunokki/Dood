@@ -8,19 +8,23 @@ public class Controller : MonoBehaviour
     Rigidbody2D rb;
     Vector2 moveInput;
     Vector2 moveVelocity;
+    public HealthBar HB;
     public Joystick joystick;
     public Joystick fireJoystick;
+    public Joystick ultJoystick;
     public float speed;
     public int health;
     public int spawnTimer;
-    float timer;
     public int currentHealth;
+    float timer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = health;
         timer = spawnTimer;
+        HB.SetMaxHealth(health);
+        HB.SetHealth(currentHealth);
     }
 
     void Update()
@@ -30,7 +34,7 @@ public class Controller : MonoBehaviour
         Vector3 moveVector = (Vector3.up * joystick.Horizontal + Vector3.left * joystick.Vertical);
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
-            if (fireJoystick.Horizontal == 0 || fireJoystick.Vertical == 0)
+            if ((fireJoystick.Horizontal == 0 || fireJoystick.Vertical == 0) && (ultJoystick.Horizontal == 0 || ultJoystick.Vertical == 0))
             {
                 transform.rotation = Quaternion.LookRotation(Vector3.forward, moveVector);
             }
@@ -57,5 +61,6 @@ public class Controller : MonoBehaviour
     public void DealDamage(int damage)
     {
         currentHealth -= damage;
+        HB.SetHealth(currentHealth);
     }
 }

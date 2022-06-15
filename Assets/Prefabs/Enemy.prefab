@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6169076589424682458}
   - component: {fileID: 6943591756232307082}
   - component: {fileID: 2633773417280500831}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8c617b518f53494680e327a0550a85f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HB: {fileID: 0}
   health: 10
-  speed: 3
   damage: 10
-  damageTimer: 1
+  speed: 3
 --- !u!50 &6943591756232307082
 Rigidbody2D:
   serializedVersion: 4
@@ -99,7 +99,8 @@ GameObject:
   - component: {fileID: 6169076590287627711}
   - component: {fileID: 6169076590287627710}
   - component: {fileID: 7525648648093727165}
-  m_Layer: 6
+  - component: {fileID: 7419780929506100022}
+  m_Layer: 10
   m_Name: EnemyCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +114,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6169076590287627699}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.5334077, y: 4.5334077, z: 4.5334077}
   m_Children: []
@@ -191,7 +192,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &7525648648093727165
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -208,3 +209,22 @@ CircleCollider2D:
   m_Offset: {x: 0.0045861863, y: -5.4671595e-10}
   serializedVersion: 2
   m_Radius: 0.122958206
+--- !u!1818360608 &7419780929506100022
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6169076590287627699}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 6169076589424682459}
+    weight: 1

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6742197331910337419}
   - component: {fileID: 1112619133474559521}
   - component: {fileID: 8532885273197638657}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ MonoBehaviour:
   damage: 2
   Solid:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1089
 --- !u!58 &8532885273197638657
 CircleCollider2D:
   m_ObjectHideFlags: 0
