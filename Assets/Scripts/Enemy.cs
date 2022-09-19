@@ -23,10 +23,10 @@ public class Enemy : MonoBehaviour
     
     void Update() 
     {
-        /*Vector3 dir = GameObject.Find("Player").transform.position - transform.position;
-        transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg, Vector3.forward);*/
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, GameObject.Find("Player").transform.position);
         if (Vector3.Distance(GameObject.Find("Player").transform.position, transform.position) <= 10f)
         {
+            
             transform.position = Vector3.MoveTowards(transform.position, GameObject.Find("Player").transform.position, speed * Time.deltaTime);
         }
         if (currentHealth <= 0)

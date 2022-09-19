@@ -63,14 +63,24 @@ public class Ult : MonoBehaviour
         smb.GetComponent<Enemy>().TakeDamage(damage);
         int i = 2;
         float timer = 3f;
-        while (i > 0)
+        if (smb != null)
         {
-            if (i == Mathf.Round(timer)) 
+            while (i > 0)
             {
-                i--;
-                smb.GetComponent<Enemy>().TakeDamage(1);
+                if (i == Mathf.Round(timer)) 
+                {
+                    if (smb != null)
+                    {
+                        i--;
+                        smb.GetComponent<Enemy>().TakeDamage(1);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                timer -= Time.deltaTime;
             }
-            timer -= Time.deltaTime;
         }
     }
 

@@ -13,7 +13,6 @@ ScriptsOnlyBuild:
     - HealthBar
     - Pause
     - SceneManagment
-    - Spawner
     - Ult
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -296,8 +295,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6562}
     - Class: 114
       Script: {instanceID: 6632}
-    - Class: 114
-      Script: {instanceID: 7238}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1345,12 +1342,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 0e004ccc5c8e116ab7349b00cc6f5dea
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Spawner
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

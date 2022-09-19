@@ -49,16 +49,16 @@ public class Elements : MonoBehaviour
             switch (Comb[Elem1, Elem2])
             {
                 case 0:
-                cooldown = 1.3f;
+                cooldown = 2.6f;
                 break;
                 case 1: 
-                cooldown = 1.5f;
+                cooldown = 3f;
                 break;
                 case 2: 
-                cooldown = 1.7f;
+                cooldown = 3.4f;
                 break;
                 case 3: 
-                cooldown = 1f;
+                cooldown = 2f;
                 break;
                 default:
                 cooldown = 0f;

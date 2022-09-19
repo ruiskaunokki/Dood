@@ -14,6 +14,7 @@ public class Pause : MonoBehaviour
         AllUI.SetActive(true);
         PauseUI.SetActive(false);
         WinUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void PressPause()

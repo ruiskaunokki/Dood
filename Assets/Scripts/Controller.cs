@@ -41,7 +41,6 @@ public class Controller : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            Debug.Log("Игрок умер");
             if (timer <= 0)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
